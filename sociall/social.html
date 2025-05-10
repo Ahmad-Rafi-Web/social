@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Social & Saweria Links</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 30px 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 600px;
+    max-width: 350px;
+    margin: 0 auto;
+    user-select: none;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    overflow-x: hidden;
+    position: relative;
+    z-index: 0;
+  }
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+  }
+  .links-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 15px;
+    position: relative;
+    z-index: 10;
+  }
+  a.button {
+    padding: 18px 0;
+    border-radius: 40px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+  }
+  a.button:focus {
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+  }
+  a.button.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  }
+  a.button.instagram:hover {
+    box-shadow: 0 8px 20px #f09433cc;
+    transform: scale(1.05);
+  }
+  a.button.github {
+    background: #333;
+  }
+  a.button.github:hover {
+    box-shadow: 0 8px 20px #666;
+    transform: scale(1.05);
+  }
+  a.button.tiktok {
+    background: linear-gradient(45deg, #25F4EE, #89F7FE);
+    color: #000;
+  }
+  a.button.tiktok:hover {
+    box-shadow: 0 8px 20px #25F4EEcc;
+    transform: scale(1.05);
+  }
+  a.button.whatsapp {
+    background: #25D366;
+  }
+  a.button.whatsapp:hover {
+    box-shadow: 0 8px 20px #1ebe57cc;
+    transform: scale(1.05);
+  }
+  .saweria-container {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+  a.button.saweria {
+    max-width: 250px;
+    background: #ff3860;
+    font-size: 1.5rem;
+    padding: 20px 0;
+    display: inline-block;
+    box-shadow: 0 8px 25px rgba(255, 56, 96, 0.8);
+    border-radius: 50px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  a.button.saweria:hover {
+    background: #ff1f43;
+    box-shadow: 0 12px 30px rgba(255,31,67,0.9);
+    transform: scale(1.1);
+  }
+  @media (max-width: 350px) {
+    .links-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      width: 100%;
+    }
+    a.button {
+      font-size: 1.1rem;
+      padding: 15px 0;
+      border-radius: 35px;
+    }
+    .saweria-container a.button {
+      max-width: 100%;
+      font-size: 1.3rem;
+      padding: 18px 0;
+      border-radius: 45px;
+    }
+  }
+
+  /* Snowflakes container on top of the background */
+  #snow-container {
+    pointer-events: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .snowflake {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    filter: drop-shadow(0 0 1px rgba(255,255,255,0.8));
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<h1>Connect with Me</h1>
+<div class="links-container" role="list">
+  <a href="https://www.instagram.com/ahmad.raf1_?igsh=MnpicHViYXo2aTEw" target="_blank" rel="noopener noreferrer" class="button instagram" role="listitem" aria-label="Instagram link">Instagram</a>
+  <a href="https://github.com/Ahmad-Rafi-Web" target="_blank" rel="noopener noreferrer" class="button github" role="listitem" aria-label="GitHub link">GitHub</a>
+  <a href="https://www.tiktok.com/@ahmad.rafiiii?_t=ZS-8wEE9WTn1If&_r=1" target="_blank" rel="noopener noreferrer" class="button tiktok" role="listitem" aria-label="TikTok link">TikTok</a>
+  <a href="https://wa.me/qr/ZBMLVWTYIAODC1" target="_blank" rel="noopener noreferrer" class="button whatsapp" role="listitem" aria-label="WhatsApp link">WhatsApp</a>
+</div>
+<div class="saweria-container">
+  <a href="https://saweria.co/bihungoreng" target="_blank" rel="noopener noreferrer" class="button saweria" aria-label="Support me on Saweria">Support Me on Saweria 💸</a>
+</div>
+
+<div id="snow-container"></div>
+
+<script>
+  (function(){
+    const snowContainer = document.getElementById('snow-container');
+    const maxFlakes = 40;
+    const flakes = [];
+
+    function randomRange(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function createFlake() {
+      const flake = document.createElement('div');
+      flake.classList.add('snowflake');
+      // random size 5-12 px
+      flake.style.width = flake.style.height = `${randomRange(5, 12)}px`;
+      flake.style.left = `${randomRange(0, window.innerWidth)}px`;
+      flake.style.opacity = randomRange(0.3, 0.9);
+      flake.speed = randomRange(1, 3); // falling speed px per frame approx
+      flake.x = parseFloat(flake.style.left);
+      flake.y = randomRange(-20, -5);
+      flake.angle = randomRange(0, 2*Math.PI);
+      flake.angleSpeed = randomRange(0.01, 0.03);
+      snowContainer.appendChild(flake);
+      return flake;
+    }
+
+    function updateFlakes() {
+      flakes.forEach(flake => {
+        flake.y += flake.speed;
+        flake.angle += flake.angleSpeed;
+        flake.x += Math.sin(flake.angle) * 0.5;
+        flake.style.transform = `translate(${flake.x}px, ${flake.y}px)`;
+        if(flake.y > window.innerHeight) {
+          flake.y = -10;
+          flake.x = randomRange(0, window.innerWidth);
+        }
+      });
+      requestAnimationFrame(updateFlakes);
+    }
+
+    // Initialize flakes
+    for(let i=0; i<maxFlakes; i++) {
+      flakes.push(createFlake());
+    }
+    updateFlakes();
+
+    // Adjust flakes on window resize
+    window.addEventListener('resize', () => {
+      flakes.forEach(flake => {
+        if(flake.x > window.innerWidth) flake.x = randomRange(0, window.innerWidth);
+      });
+    });
+  })();
+</script>
+</body>
+</html>
